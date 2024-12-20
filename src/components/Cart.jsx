@@ -76,7 +76,7 @@ const Cart = () => {
                 Total Price: {cart.reduce((total, item) => total + parseFloat(item.price.slice(1)), 0).toFixed(2)}
               </p>
             </div>
-            <div>
+            <div className="flex flex-wrap gap-8 justify-end">
               <Link to="/checkout">
                 <button className="bg-green-500 text-white py-2 px-4 rounded hover:bg-yellow-800 focus:ring">
                   Checkout
@@ -84,7 +84,7 @@ const Cart = () => {
               </Link>
               <button
                 onClick={clearCart} // Clear cart
-                className="bg-gray-500 text-white py-2 px-4 rounded hover:bg-gray-700 focus:ring ml-4"
+                className="bg-gray-500 text-white py-2 px-4 rounded hover:bg-gray-700 focus:ring"
               >
                 Clear Cart
               </button>
